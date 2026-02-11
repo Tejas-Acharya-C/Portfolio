@@ -560,22 +560,48 @@ function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     const originalHTML = btn.innerHTML;
 
-    btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Sent!</span>';
+    // Loading state
+    btn.innerHTML = '<span class="loader"></span> Sending...';
     btn.style.pointerEvents = 'none';
+    btn.style.opacity = '0.8';
 
-    gsap.to(btn, { scale: 0.95, duration: 0.1, yoyo: true, repeat: 1 });
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form)))
+      });
 
+      const json = await response.json();
+
+      if (response.status === 200) {
+        // Success state
+        btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Sent!</span>';
+        gsap.to(btn, { scale: 0.95, duration: 0.1, yoyo: true, repeat: 1 });
+        form.reset();
+      } else {
+        // API Error
+        console.error(json);
+        btn.innerHTML = '<span>Error! Try again.</span>';
+      }
+    } catch (error) {
+      // Network Error
+      console.error(error);
+      btn.innerHTML = '<span>Something went wrong.</span>';
+    }
+
+    // Reset button after delay
     setTimeout(() => {
       btn.innerHTML = originalHTML;
       btn.style.pointerEvents = '';
-      form.reset();
+      btn.style.opacity = '1';
       if (window.lucide) lucide.createIcons();
-    }, 2500);
+    }, 3000);
   });
 }
 
