@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tejas | Full Stack Developer — Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Tejas — Full Stack Developer crafting immersive digital experiences with Python, JavaScript, and modern web technologies." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <!-- ==================== PRELOADER ==================== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <span class="logo-bracket">&lt;</span>Tejas<span class="logo-bracket">/&gt;</span>
+      </div>
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill" id="preloaderFill"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== SCROLL PROGRESS ==================== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ==================== 3D CANVAS ==================== -->
+  <canvas id="bg3d"></canvas>
+
+  <!-- ==================== CURSOR GLOW ==================== -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Tejas<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+
+    <!-- Floating Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+    <div class="floating-orb orb-4"></div>
+    <div class="floating-orb orb-5"></div>
+
+    <div class="hero-content" data-parallax data-speed="0.3">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text">Tejas</span>
+      </h1>
+      <div class="hero-typewriter">
+        <span class="typewriter-prefix">I build </span>
+        <span class="typewriter-text" id="typewriterText"></span>
+        <span class="typewriter-cursor">|</span>
+      </div>
+      <p class="hero-description">
+        A passionate Full Stack Developer crafting elegant digital experiences with modern technologies.
+        I turn ideas into scalable, beautiful, and performant applications.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary magnetic" data-magnetic>
+          <span class="btn-glow"></span>
+          <i data-lucide="folder-open" class="btn-icon"></i>
+          View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline magnetic" data-magnetic>
+          <i data-lucide="send" class="btn-icon"></i>
+          Get in Touch
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years Exp</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-parallax data-speed="-0.2">
+      <div class="code-window">
+        <div class="code-header">
+          <div class="code-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <span class="code-filename">developer.js</span>
+        </div>
+        <pre class="code-body"><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Tejas"</span>,
+  <span class="code-prop">role</span>: <span class="code-string">"Full Stack Dev"</span>,
+  <span class="code-prop">skills</span>: [
+    <span class="code-string">"Python"</span>,
+    <span class="code-string">"JavaScript"</span>,
+    <span class="code-string">"React"</span>,
+    <span class="code-string">"Node.js"</span>
+  ],
+  <span class="code-prop">passion</span>: <span class="code-string">"Building cool stuff"</span>,
+  <span class="code-method">create</span>() {
+    <span class="code-keyword">return</span> <span class="code-string">"Something amazing ✨"</span>;
+  }
+};</code></pre>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="section about" id="about">
+    <!-- Parallax shapes -->
+    <div class="parallax-shape shape-circle" data-parallax data-speed="0.15" style="top:10%;left:5%"></div>
+    <div class="parallax-shape shape-ring" data-parallax data-speed="-0.1" style="top:60%;right:8%"></div>
+    <div class="parallax-shape shape-cross" data-parallax data-speed="0.2" style="bottom:15%;left:15%"></div>
+
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag"><i data-lucide="user" class="tag-icon"></i> About Me</span>
+        <h2 class="section-title">Crafting Digital <span class="gradient-text">Experiences</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col" data-reveal data-reveal-delay="0.2">
+          <div class="about-image-wrapper tilt-card" data-tilt>
+            <div class="about-image-placeholder">
+              <i data-lucide="code-2" class="about-avatar-icon"></i>
+              <span>Tejas</span>
+            </div>
+            <div class="about-image-border"></div>
+            <div class="about-image-glow"></div>
+          </div>
+        </div>
+        <div class="about-text-col" data-reveal data-reveal-delay="0.4">
+          <p class="about-description">
+            I'm a Full Stack Developer based in India with a deep love for building web applications
+            that are not only functional but also beautifully designed. I specialize in Python, JavaScript,
+            and modern frameworks, and I'm always experimenting with new tools and technologies.
+          </p>
+          <p class="about-description">
+            When I'm not coding, you'll find me exploring new tech trends, contributing to open-source
+            projects, or enjoying a good cup of coffee while brainstorming the next big idea.
+          </p>
+          <div class="about-details">
+            <div class="detail-item">
+              <i data-lucide="map-pin" class="detail-icon"></i>
+              <span>India</span>
+            </div>
+            <div class="detail-item">
+              <i data-lucide="briefcase" class="detail-icon"></i>
+              <span>Open to Work</span>
+            </div>
+            <div class="detail-item">
+              <i data-lucide="graduation-cap" class="detail-icon"></i>
+              <span>B.Tech in CS</span>
+            </div>
+            <div class="detail-item">
+              <i data-lucide="languages" class="detail-icon"></i>
+              <span>English, Hindi</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary magnetic" data-magnetic download>
+            <span class="btn-glow"></span>
+            <i data-lucide="download" class="btn-icon"></i>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section class="section skills" id="skills">
+    <div class="parallax-shape shape-dots" data-parallax data-speed="0.12" style="top:15%;right:10%"></div>
+    <div class="parallax-shape shape-triangle" data-parallax data-speed="-0.08" style="bottom:20%;left:5%"></div>
+
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag"><i data-lucide="cpu" class="tag-icon"></i> Skills</span>
+        <h2 class="section-title">My <span class="gradient-text">Tech Stack</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category tilt-card" data-tilt data-reveal data-reveal-delay="0.1">
+          <div class="skill-card-glow"></div>
+          <h3 class="skill-category-title"><i data-lucide="code" class="cat-icon"></i> Languages</h3>
+          <div class="skill-tags">
+            <div class="skill-tag"><span class="skill-dot" style="background:#3776AB"></span>Python</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#F7DF1E"></span>JavaScript</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#3178C6"></span>TypeScript</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#E34F26"></span>HTML5</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#1572B6"></span>CSS3</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#4479A1"></span>SQL</div>
+          </div>
+        </div>
+        <div class="skill-category tilt-card" data-tilt data-reveal data-reveal-delay="0.2">
+          <div class="skill-card-glow"></div>
+          <h3 class="skill-category-title"><i data-lucide="layout" class="cat-icon"></i> Frontend</h3>
+          <div class="skill-tags">
+            <div class="skill-tag"><span class="skill-dot" style="background:#61DAFB"></span>React</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#000"></span>Next.js</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#06B6D4"></span>Tailwind CSS</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#646CFF"></span>Vite</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#F24E1E"></span>Figma</div>
+          </div>
+        </div>
+        <div class="skill-category tilt-card" data-tilt data-reveal data-reveal-delay="0.3">
+          <div class="skill-card-glow"></div>
+          <h3 class="skill-category-title"><i data-lucide="server" class="cat-icon"></i> Backend</h3>
+          <div class="skill-tags">
+            <div class="skill-tag"><span class="skill-dot" style="background:#339933"></span>Node.js</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#000"></span>Express</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#009688"></span>FastAPI</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#092E20"></span>Django</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#000"></span>Flask</div>
+          </div>
+        </div>
+        <div class="skill-category tilt-card" data-tilt data-reveal data-reveal-delay="0.4">
+          <div class="skill-card-glow"></div>
+          <h3 class="skill-category-title"><i data-lucide="wrench" class="cat-icon"></i> Tools & DevOps</h3>
+          <div class="skill-tags">
+            <div class="skill-tag"><span class="skill-dot" style="background:#F05032"></span>Git</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#2496ED"></span>Docker</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#FF9900"></span>AWS</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#47A248"></span>MongoDB</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#4169E1"></span>PostgreSQL</div>
+            <div class="skill-tag"><span class="skill-dot" style="background:#003B57"></span>SQLite</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section class="section projects" id="projects">
+    <div class="parallax-shape shape-circle shape-lg" data-parallax data-speed="0.18" style="top:5%;right:3%"></div>
+    <div class="parallax-shape shape-ring" data-parallax data-speed="-0.12" style="bottom:10%;left:5%"></div>
+
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag"><i data-lucide="rocket" class="tag-icon"></i> Projects</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Work</span></h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card featured tilt-card" data-tilt data-tilt-max="5" data-reveal>
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--accent: #8B5CF6">
+              <i data-lucide="bot" class="project-placeholder-icon"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn"><i data-lucide="external-link"></i></a>
+              <a href="#" class="project-link-btn"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">WebSocket</span>
+            </div>
+            <h3 class="project-title">AI Interview Coach</h3>
+            <p class="project-description">
+              An AI-powered mock interview platform with real-time feedback, video recording,
+              performance analytics, and a comprehensive question bank.
+            </p>
+          </div>
+        </article>
+        <article class="project-card tilt-card" data-tilt data-reveal data-reveal-delay="0.15">
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--accent: #06B6D4">
+              <i data-lucide="bar-chart-3" class="project-placeholder-icon"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn"><i data-lucide="external-link"></i></a>
+              <a href="#" class="project-link-btn"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Pandas</span>
+              <span class="project-tag">NLP</span>
+            </div>
+            <h3 class="project-title">Customer Feedback Analyzer</h3>
+            <p class="project-description">
+              A data analysis tool that processes customer feedback from CSV and text files,
+              providing sentiment analysis and actionable insights.
+            </p>
+          </div>
+        </article>
+        <article class="project-card tilt-card" data-tilt data-reveal data-reveal-delay="0.3">
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--accent: #F59E0B">
+              <i data-lucide="shopping-cart" class="project-placeholder-icon"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn"><i data-lucide="external-link"></i></a>
+              <a href="#" class="project-link-btn"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">Stripe</span>
+              <span class="project-tag">MongoDB</span>
+            </div>
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <p class="project-description">
+              A full-featured online store with product management, cart functionality,
+              Stripe payment integration, and admin dashboard.
+            </p>
+          </div>
+        </article>
+        <article class="project-card tilt-card" data-tilt data-reveal data-reveal-delay="0.45">
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--accent: #10B981">
+              <i data-lucide="message-square" class="project-placeholder-icon"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn"><i data-lucide="external-link"></i></a>
+              <a href="#" class="project-link-btn"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Socket.io</span>
+              <span class="project-tag">Node.js</span>
+            </div>
+            <h3 class="project-title">Real-Time Chat App</h3>
+            <p class="project-description">
+              A modern chat application with real-time messaging, group channels,
+              file sharing, and end-to-end encryption support.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPERIENCE ==================== -->
+  <section class="section experience" id="experience">
+    <div class="parallax-shape shape-cross" data-parallax data-speed="0.1" style="top:20%;right:12%"></div>
+    <div class="parallax-shape shape-dots" data-parallax data-speed="-0.15" style="bottom:15%;left:8%"></div>
+
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag"><i data-lucide="briefcase" class="tag-icon"></i> Experience</span>
+        <h2 class="section-title">Work <span class="gradient-text">Timeline</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" data-reveal data-reveal-delay="0.1">
+          <div class="timeline-marker">
+            <div class="timeline-marker-pulse"></div>
+          </div>
+          <div class="timeline-content tilt-card" data-tilt data-tilt-max="4">
+            <div class="timeline-date">2024 — Present</div>
+            <h3 class="timeline-title">Full Stack Developer</h3>
+            <p class="timeline-company">Freelance / Self-Employed</p>
+            <p class="timeline-description">
+              Building modern web applications for clients across various industries.
+              Specializing in React, Python backends, and cloud deployments.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item" data-reveal data-reveal-delay="0.25">
+          <div class="timeline-marker">
+            <div class="timeline-marker-pulse"></div>
+          </div>
+          <div class="timeline-content tilt-card" data-tilt data-tilt-max="4">
+            <div class="timeline-date">2023 — 2024</div>
+            <h3 class="timeline-title">Software Development Intern</h3>
+            <p class="timeline-company">Tech Startup Inc.</p>
+            <p class="timeline-description">
+              Contributed to the development of a SaaS platform using React and Node.js.
+              Improved API performance by 40% through query optimization.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item" data-reveal data-reveal-delay="0.4">
+          <div class="timeline-marker">
+            <div class="timeline-marker-pulse"></div>
+          </div>
+          <div class="timeline-content tilt-card" data-tilt data-tilt-max="4">
+            <div class="timeline-date">2020 — 2024</div>
+            <h3 class="timeline-title">B.Tech in Computer Science</h3>
+            <p class="timeline-company">XYZ University</p>
+            <p class="timeline-description">
+              Focused on Data Structures, Algorithms, Web Development, and Machine Learning.
+              Maintained a strong academic record while working on personal projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="section contact" id="contact">
+    <div class="parallax-shape shape-circle" data-parallax data-speed="0.1" style="top:10%;left:8%"></div>
+    <div class="parallax-shape shape-triangle" data-parallax data-speed="-0.12" style="bottom:10%;right:5%"></div>
+
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag"><i data-lucide="mail" class="tag-icon"></i> Contact</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-subtitle">Have a project in mind or just want to say hello? I'd love to hear from you!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-col" data-reveal data-reveal-delay="0.2">
+          <div class="contact-card tilt-card" data-tilt>
+            <i data-lucide="mail" class="contact-card-icon"></i>
+            <h4>Email</h4>
+            <a href="mailto:tejas@example.com">tejas@example.com</a>
+          </div>
+          <div class="contact-card tilt-card" data-tilt>
+            <i data-lucide="map-pin" class="contact-card-icon"></i>
+            <h4>Location</h4>
+            <span>India</span>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link magnetic" data-magnetic aria-label="GitHub"><i data-lucide="github"></i></a>
+            <a href="#" class="social-link magnetic" data-magnetic aria-label="LinkedIn"><i
+                data-lucide="linkedin"></i></a>
+            <a href="#" class="social-link magnetic" data-magnetic aria-label="Twitter"><i
+                data-lucide="twitter"></i></a>
+            <a href="#" class="social-link magnetic" data-magnetic aria-label="Instagram"><i
+                data-lucide="instagram"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" data-reveal data-reveal-delay="0.4">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full magnetic" data-magnetic>
+            <span class="btn-glow"></span>
+            <i data-lucide="send" class="btn-icon"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="footer-logo">
+        <span class="logo-bracket">&lt;</span>Tejas<span class="logo-bracket">/&gt;</span>
+      </a>
+      <p class="footer-text">Designed & Built by Tejas · © 2026</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BACK TO TOP ==================== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
