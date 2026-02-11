@@ -296,11 +296,11 @@ function initTypewriter() {
   if (!el) return;
 
   const phrases = [
-    'modern web apps.',
-    'elegant UIs.',
-    'scalable backends.',
-    'full-stack solutions.',
-    '3D experiences.',
+    'web applications.',
+    'Python projects.',
+    'clean UIs.',
+    'real-world solutions.',
+    'full-stack apps.',
   ];
   let phraseIdx = 0, charIdx = 0, deleting = false;
 
