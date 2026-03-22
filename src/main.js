@@ -161,7 +161,7 @@ function initThreeScene() {
     new THREE.DodecahedronGeometry(0.7, 0),
   ];
 
-  const colors = [0x8b5cf6, 0x06b6d4, 0xec4899, 0x22c55e, 0xf59e0b, 0x6366f1];
+  const colors = [0x8ff5ff, 0x00eefc, 0x9900cf, 0x00F0FF, 0xBD00FF, 0x7000FF];
 
   for (let i = 0; i < 18; i++) {
     const geom = geometries[Math.floor(Math.random() * geometries.length)];

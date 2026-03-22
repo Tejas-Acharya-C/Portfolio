@@ -5,32 +5,33 @@
 /* ---------- CSS Variables ---------- */
 :root {
   --bg-primary: #050508;
-  --bg-secondary: #0a0a10;
-  --bg-card: rgba(18, 18, 28, 0.7);
-  --bg-card-hover: rgba(25, 25, 38, 0.85);
+  --bg-secondary: #0e0e12;
+  --bg-card: rgba(37, 37, 43, 0.4);
+  --bg-card-hover: rgba(44, 43, 50, 0.8);
 
-  --text-primary: #e8e8ef;
-  --text-secondary: #9494a8;
-  --text-muted: #5e5e72;
+  --text-primary: #f3eff6;
+  --text-secondary: #acaab0;
+  --text-muted: #76757a;
 
-  --accent-1: #8b5cf6;
-  --accent-2: #06b6d4;
-  --accent-3: #ec4899;
+  --accent-1: #8ff5ff;
+  --accent-2: #00eefc;
+  --accent-3: #9900cf;
   --gradient-primary: linear-gradient(135deg, var(--accent-1), var(--accent-2));
   --gradient-accent: linear-gradient(135deg, var(--accent-1), var(--accent-3));
 
-  --border-color: rgba(255, 255, 255, 0.06);
-  --border-hover: rgba(139, 92, 246, 0.35);
+  --border-color: rgba(72, 71, 76, 0.2);
+  --border-hover: rgba(143, 245, 255, 0.5);
 
-  --radius-sm: 10px;
-  --radius-md: 14px;
-  --radius-lg: 22px;
-  --radius-xl: 30px;
-  --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.2);
-  --shadow-glow-strong: 0 8px 60px rgba(139, 92, 246, 0.25);
-  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --shadow-glow: 0 0 30px rgba(143, 245, 255, 0.15);
+  --shadow-glow-strong: 0 4px 40px rgba(143, 245, 255, 0.25);
+  --transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
 }
 
 /* ---------- Reset & Base ---------- */
@@ -53,6 +54,11 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .project-title, .skill-category-title, .hero-typewriter {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
 }
 
 a {
@@ -103,7 +109,7 @@ img {
   width: 700px;
   height: 700px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.07) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(143, 245, 255, 0.07) 0%, transparent 65%);
   pointer-events: none;
   z-index: 1;
   transform: translate(-50%, -50%);
@@ -449,8 +455,8 @@ img {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(143, 245, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 245, 255, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 20%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 20%, transparent 70%);
@@ -480,8 +486,8 @@ img {
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  background: rgba(139, 92, 246, 0.1);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  background: rgba(143, 245, 255, 0.1);
+  border: 1px solid rgba(143, 245, 255, 0.2);
   border-radius: var(--radius-xl);
   font-size: 0.82rem;
   font-weight: 500;
@@ -613,13 +619,17 @@ img {
 .code-window {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
+  border-top: 1px solid rgba(143, 245, 255, 0.2);
+  border-left: 1px solid rgba(143, 245, 255, 0.2);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   transform: perspective(800px) rotateY(-8deg) rotateX(3deg);
   transition: transform 0.5s;
+  box-shadow: var(--shadow-glow);
 }
 
 .code-header {
@@ -627,7 +637,7 @@ img {
   align-items: center;
   gap: 12px;
   padding: 12px 16px;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -798,7 +808,7 @@ img {
 
 .btn-outline:hover {
   border-color: var(--border-hover);
-  background: rgba(139, 92, 246, 0.08);
+  background: rgba(143, 245, 255, 0.08);
   transform: translateY(-3px);
 }
 
@@ -826,8 +836,8 @@ img {
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  background: rgba(139, 92, 246, 0.08);
-  border: 1px solid rgba(139, 92, 246, 0.15);
+  background: rgba(143, 245, 255, 0.08);
+  border: 1px solid rgba(143, 245, 255, 0.15);
   border-radius: var(--radius-xl);
   font-size: 0.82rem;
   font-weight: 600;
@@ -933,7 +943,7 @@ img {
   position: absolute;
   inset: -30px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent 70%);
+  background: radial-gradient(circle, rgba(143, 245, 255, 0.15), transparent 70%);
   z-index: -2;
   animation: glow-pulse 3s ease-in-out infinite alternate;
 }
@@ -1018,7 +1028,7 @@ img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent 70%);
+  background: radial-gradient(circle, rgba(143, 245, 255, 0.15), transparent 70%);
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.4s;
@@ -1072,7 +1082,7 @@ img {
 .skill-tag:hover {
   border-color: var(--border-hover);
   color: var(--text-primary);
-  background: rgba(139, 92, 246, 0.08);
+  background: rgba(143, 245, 255, 0.08);
   transform: translateY(-2px);
 }
 
@@ -1196,7 +1206,7 @@ img {
 
 .project-tag {
   padding: 4px 11px;
-  background: rgba(139, 92, 246, 0.1);
+  background: rgba(143, 245, 255, 0.1);
   border-radius: var(--radius-xl);
   font-size: 0.72rem;
   font-weight: 600;
@@ -1438,7 +1448,7 @@ img {
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent-1);
-  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12);
+  box-shadow: 0 0 0 4px rgba(143, 245, 255, 0.12);
 }
 
 .form-group input::placeholder,
@@ -1690,7 +1700,7 @@ img {
   background: var(--gradient-primary);
   z-index: 10001;
   transition: width 0.05s linear;
-  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 10px rgba(143, 245, 255, 0.5);
 }
 
 /* ============================
