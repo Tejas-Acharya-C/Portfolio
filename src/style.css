@@ -84,6 +84,8 @@ img {
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  filter: blur(6px);
+  opacity: 0.8;
 }
 
 /* ---------- Utility ---------- */
