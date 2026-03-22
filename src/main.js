@@ -153,26 +153,40 @@ function initThreeScene() {
 
   // Floating 3D objects — kept light for performance
   const objects = [];
-  const geometries = [
-    new THREE.IcosahedronGeometry(1, 0),
-    new THREE.OctahedronGeometry(0.8, 0),
-    new THREE.TetrahedronGeometry(0.9, 0),
-    new THREE.TorusGeometry(0.7, 0.25, 8, 16),
-    new THREE.DodecahedronGeometry(0.7, 0),
-  ];
+  const colors = [0x4FD1C5, 0xfcb259, 0x32bbff, 0x23b3a8, 0xffc78a, 0x03aef2];
 
-  const colors = [0x8ff5ff, 0x00eefc, 0x9900cf, 0x00F0FF, 0xBD00FF, 0x7000FF];
-
-  for (let i = 0; i < 18; i++) {
-    const geom = geometries[Math.floor(Math.random() * geometries.length)];
+  for (let i = 0; i < 15; i++) {
+    const type = Math.random();
+    let mesh;
     const mat = new THREE.MeshBasicMaterial({
       color: colors[Math.floor(Math.random() * colors.length)],
       transparent: true,
-      opacity: 0.12 + Math.random() * 0.12,
+      opacity: 0.15 + Math.random() * 0.15,
       wireframe: true,
     });
 
-    const mesh = new THREE.Mesh(geom, mat);
+    if (type > 0.7) {
+      // Wireframe Laptop
+      mesh = new THREE.Group();
+      const base = new THREE.Mesh(new THREE.BoxGeometry(2, 0.1, 1.5), mat);
+      const screen = new THREE.Mesh(new THREE.BoxGeometry(2, 1.4, 0.1), mat);
+      screen.position.y = 0.7;
+      screen.position.z = -0.7;
+      screen.rotation.x = -0.15;
+      mesh.add(base);
+      mesh.add(screen);
+    } else if (type > 0.4) {
+      // Abstract Data Node (TorusKnot)
+      mesh = new THREE.Mesh(new THREE.TorusKnotGeometry(0.6, 0.2, 64, 8), mat);
+    } else {
+      // Data Block
+      mesh = new THREE.Group();
+      const outer = new THREE.Mesh(new THREE.BoxGeometry(1.2, 1.2, 1.2), mat);
+      const inner = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 1.2, 6), mat);
+      mesh.add(outer);
+      mesh.add(inner);
+    }
+
     mesh.position.set(
       (Math.random() - 0.5) * 60,
       (Math.random() - 0.5) * 60,
