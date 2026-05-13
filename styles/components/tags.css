@@ -1,0 +1,50 @@
+.stack-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--surface-low);
+    border: 1px solid var(--outline);
+    border-radius: var(--radius-sm);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.tag-secondary {
+    background: transparent;
+    color: var(--text-dim);
+}
+
+.tag-familiar {
+    background: transparent;
+    border-color: transparent;
+    color: var(--text-dim);
+    font-weight: 500;
+}
+
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+    border-radius: 999px;
+    padding: var(--space-xs) var(--space-sm);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.availability-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #43a047;
+    animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.85); }
+}

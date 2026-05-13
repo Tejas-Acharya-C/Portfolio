@@ -1,0 +1,98 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: var(--space-md) 0;
+    background: rgba(248, 249, 250, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--outline);
+    transition: padding 0.25s ease, box-shadow 0.25s ease;
+}
+
+header.scrolled {
+    padding: var(--space-sm) 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-lg);
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dim);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.nav-active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+#nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--outline);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    padding: var(--space-sm);
+    color: var(--text-main);
+}
+
+@media (max-width: 900px) {
+    #nav-toggle { display: flex; align-items: center; }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--surface-white);
+        border-bottom: 1px solid var(--outline);
+        box-shadow: 0 8px 24px var(--shadow-low);
+    }
+    .nav-links.active { display: flex; }
+    .nav-links li a {
+        display: block;
+        padding: var(--space-md) var(--space-lg);
+        border-bottom: 1px solid var(--outline);
+    }
+}
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--space-md);
+    background: var(--primary);
+    color: var(--on-primary);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    z-index: 9999;
+    transition: top 0.2s;
+}
+
+.skip-link:focus { top: var(--space-md); }

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&family=Space+Grotesk:wght@500;600&display=swap');
+
+:root {
+    /* Palette: Muted & High-Signal, refined for clarity */
+    --bg-color: #f8f9fa;
+    --surface-white: #ffffff;
+    --surface-low: #f4f5f6;
+    --surface-mid: #eceef0;
+
+    --primary: #2a2e45;
+    --primary-light: #3f4460;
+    --on-primary: #ffffff;
+
+    --text-main: #2a2e45;
+    --text-dim: #5c6072;
+    --text-dark: #12141a;
+
+    --outline: #e6e8ed;
+    --shadow-low: rgba(0, 0, 0, 0.03);
+    --shadow-mid: rgba(0, 0, 0, 0.06);
+    --shadow-high: rgba(0, 0, 0, 0.1);
+
+    /* Spacing Scale */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
+
+    /* Semantic aliases */
+    --space-xs: var(--space-1);
+    --space-sm: var(--space-2);
+    --space-md: var(--space-4);
+    --space-lg: var(--space-8);
+    --space-xl: var(--space-12);
+    --space-2xl: var(--space-16);
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --max-width: 1100px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease-in;
+    /* Subtler paper texture */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' seed='1' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23paper)' opacity='0.02'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 320px 320px;
+}
+
+body.loaded {
+    opacity: 1;
+}

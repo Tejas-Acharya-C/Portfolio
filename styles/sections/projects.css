@@ -1,0 +1,14 @@
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.project-stack-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--outline);
+    margin-top: auto;
+}

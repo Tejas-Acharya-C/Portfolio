@@ -1,0 +1,41 @@
+.h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--text-dark);
+}
+
+.h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--text-dark);
+}
+
+.h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.body {
+    font-size: 1.05rem;
+    color: var(--text-dim);
+    line-height: 1.65;
+}
+
+.dim { color: var(--text-dim); }
+
+.text-label {
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-dim);
+}
