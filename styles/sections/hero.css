@@ -1,21 +1,21 @@
 .hero {
-    padding: 160px 0 100px;
+    padding: 120px 0 80px;
     display: flex;
     align-items: center;
 }
 
 .hero-inner {
-    max-width: 760px;
+    max-width: 720px;
 }
 
 .hero-text-max {
-    max-width: 680px;
+    max-width: 640px;
 }
 
 .hero-ctas {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-md);
+    gap: var(--space-sm);
     align-items: center;
 }
 
@@ -35,9 +35,10 @@
 
 @media (max-width: 900px) {
     .hero {
-        padding: 120px 0 80px;
+        padding: 100px 0 60px;
     }
 }
 @media (max-width: 600px) {
-    .hero-ctas { flex-direction: column; align-items: flex-start; }
+    .hero-ctas { gap: var(--space-xs); }
+    .hero-ctas .btn { flex: 1 1 auto; justify-content: center; text-align: center; }
 }

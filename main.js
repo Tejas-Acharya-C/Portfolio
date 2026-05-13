@@ -5,11 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Page fade-in ──────────────────────────────────────────────
     document.body.classList.add('loaded');
 
-    // ── Header scroll state ───────────────────────────────────────
+    // ── Header scroll state (rAF optimized) ───────────────────────
     const header = document.querySelector('header');
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        header.classList.toggle('scrolled', window.scrollY > 40);
-        updateActiveNav();
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                header.classList.toggle('scrolled', window.scrollY > 40);
+                ticking = false;
+            });
+            ticking = true;
+        }
     }, { passive: true });
 
     // ── Mobile nav toggle ─────────────────────────────────────────
@@ -35,19 +41,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ── Active nav link on scroll ─────────────────────────────────
-    const sections    = document.querySelectorAll('section[id]');
-    const navAnchors  = document.querySelectorAll('.nav-links a[href^="#"]');
+    // ── Active nav link (IntersectionObserver optimized) ──────────
+    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = document.querySelectorAll('section[id]');
+    
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const currentId = entry.target.id;
+                navAnchors.forEach(a => {
+                    a.classList.toggle('nav-active', a.getAttribute('href') === `#${currentId}`);
+                });
+            }
+        });
+    }, { threshold: 0.3, rootMargin: '-10% 0px -40% 0px' });
 
-    function updateActiveNav() {
-        let current = '';
-        sections.forEach(section => {
-            if (window.scrollY >= section.offsetTop - 120) current = section.id;
-        });
-        navAnchors.forEach(a => {
-            a.classList.toggle('nav-active', a.getAttribute('href') === `#${current}`);
-        });
-    }
+    sections.forEach(sec => sectionObserver.observe(sec));
 
     // ── Scroll-reveal observer ────────────────────────────────────
     const revealObserver = new IntersectionObserver((entries) => {
@@ -64,19 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale')
         .forEach(el => revealObserver.observe(el));
-
-    // ── Texture parallax (GPU-only via CSS custom property) ───────
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                const offset = window.scrollY * 0.18;
-                document.documentElement.style.setProperty('--texture-offset', `${offset}px`);
-                ticking = false;
-            });
-            ticking = true;
-        }
-    }, { passive: true });
 
     // ── Email copy-to-clipboard ───────────────────────────────────
     const emailBtn  = document.getElementById('email-btn');

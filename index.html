@@ -91,11 +91,11 @@
                 </h1>
 
                 <p class="hero-subtitle animate-in delay-2 mt-sm">
-                    AI/ML Engineer · Frontend Product Developer · Builder of Intelligent Web Systems
+                    NLP Systems · AI-Enabled Web Applications · Frontend Engineering
                 </p>
 
                 <p class="body animate-in delay-2 mt-md hero-text-max">
-                    I am an engineer focused on the intersection of applied artificial intelligence and premium frontend product development. I build robust NLP systems, secure backend architectures, and technically grounded web applications designed for scale and clarity.
+                    I build AI-enabled web applications and production-ready NLP systems. Focused on clean frontend architecture, secure APIs, and product-grade engineering.
                 </p>
 
                 <div class="hero-ctas animate-in delay-3 mt-lg">
@@ -116,11 +116,9 @@
 
                 <!-- Quick-scan stack summary -->
                 <div class="hero-stack animate-in delay-3 mt-lg" aria-label="Primary technologies">
-                    <span class="stack-tag">Python & PyTorch</span>
-                    <span class="stack-tag">Scikit-learn</span>
+                    <span class="stack-tag">Python & NLP</span>
                     <span class="stack-tag">FastAPI</span>
-                    <span class="stack-tag">React & TS</span>
-                    <span class="stack-tag">PostgreSQL</span>
+                    <span class="stack-tag">React & TypeScript</span>
                     <span class="stack-tag">Docker</span>
                 </div>
 
@@ -147,6 +145,10 @@
                                     <span class="material-symbols-outlined" aria-hidden="true">code</span>
                                     GitHub
                                 </a>
+                                <a href="https://customer-feedback-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live Demo">
+                                    <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+                                    Live Demo
+                                </a>
                             </div>
                         </div>
                         <h3 class="h3 mt-sm" id="proj1-title">Customer Feedback File Analyzer</h3>
@@ -160,26 +162,38 @@
                         <div class="project-left">
                             <div class="project-section">
                                 <h4 class="project-section-title">Overview</h4>
-                                <p>An NLP-powered analytics platform that automates sentiment analysis, keyword extraction, and customer feedback categorization from CSV and Excel data streams.</p>
+                                <p>An NLP-powered analytics platform automating sentiment analysis and categorization for unstructured feedback data streams.</p>
                             </div>
-                            <div class="project-section">
-                                <h4 class="project-section-title">Problem</h4>
-                                <p>Processing large volumes of unstructured customer feedback manually is inefficient and prone to bias. The goal was to build a robust file ingestion workflow that could automatically classify sentiments and extract actionable insights at scale.</p>
+                            <div class="project-section mt-sm">
+                                <h4 class="project-section-title">Architecture</h4>
+                                <div class="architecture-flow mt-xs">
+                                    <span class="arch-node">React UI</span>
+                                    <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_downward</span>
+                                    <span class="arch-node">FastAPI Layer</span>
+                                    <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_downward</span>
+                                    <span class="arch-node">NLP Pipeline & Scikit-learn</span>
+                                    <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_downward</span>
+                                    <span class="arch-node">Analytics Dashboard</span>
+                                </div>
                             </div>
-                            <div class="project-section">
-                                <h4 class="project-section-title">Learnings</h4>
-                                <p>Handling large-scale datasets required optimizing the pandas processing pipelines and ensuring the FastAPI backend could asynchronously process file uploads without blocking the main event loop. Connecting the Scikit-learn classification directly to a responsive React dashboard reinforced the value of a clean API contract.</p>
+                            <div class="project-section mt-sm">
+                                <h4 class="project-section-title">Deployment Notes</h4>
+                                <ul class="deployment-list mt-xs">
+                                    <li>Dockerized deployment</li>
+                                    <li>Asynchronous file ingestion</li>
+                                    <li>Environment-based configs</li>
+                                </ul>
                             </div>
                         </div>
 
                         <div class="project-right">
                             <div class="project-section">
-                                <h4 class="project-section-title">Architecture & Decisions</h4>
-                                <ul class="project-bullets">
-                                    <li>Implemented a modular FastAPI backend to manage file ingestion and serve NLP processing pipelines efficiently.</li>
-                                    <li>Utilized Scikit-learn for text classification and automated sentiment analysis, structured for extensible dataset handling.</li>
-                                    <li>Built a responsive React and Tailwind CSS frontend dashboard to visualize extracted metrics and categorization results in real time.</li>
-                                    <li>Maintained strict separation of concerns between data processing layers and API transport.</li>
+                                <h4 class="project-section-title">Engineering Details</h4>
+                                <ul class="project-bullets mt-xs">
+                                    <li>Modular FastAPI backend for efficient non-blocking file ingestion.</li>
+                                    <li>Scikit-learn text classification structured for extensible dataset handling.</li>
+                                    <li>Responsive React dashboard for real-time metric visualization.</li>
+                                    <li>Strict separation of concerns between processing and API transport.</li>
                                 </ul>
                             </div>
                             <div class="project-stack-row">
@@ -204,6 +218,10 @@
                                     <span class="material-symbols-outlined" aria-hidden="true">code</span>
                                     GitHub
                                 </a>
+                                <a href="https://obsidian-secure-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live Demo">
+                                    <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+                                    Live Demo
+                                </a>
                             </div>
                         </div>
                         <h3 class="h3 mt-sm" id="proj2-title">Obsidian Secure</h3>
@@ -217,26 +235,38 @@
                         <div class="project-left">
                             <div class="project-section">
                                 <h4 class="project-section-title">Overview</h4>
-                                <p>A secure full-stack application demonstrating robust authentication, authorization, and modular deployment via Docker containers.</p>
+                                <p>A secure full-stack application demonstrating robust RBAC, protected APIs, and modular container deployment.</p>
                             </div>
-                            <div class="project-section">
-                                <h4 class="project-section-title">Problem</h4>
-                                <p>Modern web applications require strict access controls and standardized deployment environments. The objective was to design a system with role-based access control (RBAC), protected REST APIs, and a consistent, isolated infrastructure.</p>
+                            <div class="project-section mt-sm">
+                                <h4 class="project-section-title">Architecture</h4>
+                                <div class="architecture-flow mt-xs">
+                                    <span class="arch-node">React UI</span>
+                                    <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_downward</span>
+                                    <span class="arch-node">JWT Authentication</span>
+                                    <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_downward</span>
+                                    <span class="arch-node">FastAPI REST APIs</span>
+                                    <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_downward</span>
+                                    <span class="arch-node">MongoDB & Docker</span>
+                                </div>
                             </div>
-                            <div class="project-section">
-                                <h4 class="project-section-title">Learnings</h4>
-                                <p>Implementing JWT-based RBAC highlighted the complexities of token lifecycle management. Designing validation middleware enforced strict input sanitization, while Dockerizing the full stack ensured total parity between development and production environments.</p>
+                            <div class="project-section mt-sm">
+                                <h4 class="project-section-title">Deployment Notes</h4>
+                                <ul class="deployment-list mt-xs">
+                                    <li>Modular containerized services</li>
+                                    <li>API validation middleware</li>
+                                    <li>JWT lifecycle handling</li>
+                                </ul>
                             </div>
                         </div>
 
                         <div class="project-right">
                             <div class="project-section">
-                                <h4 class="project-section-title">Architecture & Decisions</h4>
-                                <ul class="project-bullets">
-                                    <li>Designed a scalable backend structure utilizing FastAPI for performant REST APIs and MongoDB for flexible data persistence.</li>
-                                    <li>Implemented JWT authentication and custom validation middleware for secure endpoint access.</li>
-                                    <li>Established clear backend/frontend separation, enabling the React application to consume APIs agnostically.</li>
-                                    <li>Orchestrated the entire stack using Docker, guaranteeing deployment consistency.</li>
+                                <h4 class="project-section-title">Engineering Details</h4>
+                                <ul class="project-bullets mt-xs">
+                                    <li>Scalable FastAPI backend structure with MongoDB for flexible persistence.</li>
+                                    <li>JWT authentication with custom validation middleware.</li>
+                                    <li>Agnostic API consumption layer in React.</li>
+                                    <li>Full-stack Docker orchestration for guaranteed parity.</li>
                                 </ul>
                             </div>
                             <div class="project-stack-row">
@@ -251,6 +281,34 @@
                     </div>
                 </article>
 
+            </div>
+        </section>
+
+        <!-- ── GitHub Activity ────────────────────────────────────── -->
+        <section id="github" class="container" aria-labelledby="github-heading" style="margin-top: 6rem; margin-bottom: 6rem;">
+            <div class="section-heading">
+                <p class="text-label reveal">Engineering Consistency</p>
+                <h2 class="h2 mt-sm reveal stagger-1" id="github-heading">GitHub Activity & Contributions</h2>
+                <p class="body mt-sm reveal stagger-2">Continuous integration and activity reflecting consistent engineering output.</p>
+            </div>
+            
+            <div class="github-grid mt-lg reveal stagger-3 bento-grid-project">
+                <div class="project-left">
+                    <h3 class="h3">Pinned Repositories</h3>
+                    <ul class="impact-list mt-sm">
+                        <li><strong>CustomerFeedbackFileAnalyzer:</strong> NLP-powered data ingestion and analytics via FastAPI.</li>
+                        <li><strong>Obsidian-Secure:</strong> Secure RBAC REST API and modular Docker orchestration.</li>
+                        <li><strong>SpendSense:</strong> AI-powered expense categorization via Telegram.</li>
+                    </ul>
+                </div>
+                <div class="project-right">
+                    <h3 class="h3">Recent Focus</h3>
+                    <p class="body mt-sm">Actively building scalable inference APIs, designing product-grade React interfaces, and contributing to frontend engineering best practices.</p>
+                    <a href="https://github.com/Tejas-Acharya-C" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light mt-md" style="display:inline-flex; align-items:center;">
+                        <span class="material-symbols-outlined btn-icon" aria-hidden="true" style="margin-right: 8px;">code</span>
+                        View GitHub Profile
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -273,6 +331,17 @@
                         <p class="body mt-md">
                             Whether I am orchestrating a containerized microservice or refining the interactive details of a UI component, I prioritize technical maturity, clean architecture, and practical problem-solving over trend-chasing.
                         </p>
+                    </div>
+
+                    <!-- Engineering Principles -->
+                    <div class="principles-block reveal mt-lg">
+                        <h3 class="h3">Engineering Principles</h3>
+                        <ul class="impact-list mt-sm">
+                            <li><strong>Clear API Boundaries:</strong> Strict separation of concerns between data processing and transport.</li>
+                            <li><strong>Maintainable Frontend Systems:</strong> Modular CSS, robust components, and accessibility by default.</li>
+                            <li><strong>Practical AI Integration:</strong> Focused on real-world utility over AI theater.</li>
+                            <li><strong>Scalable Architecture:</strong> Container-first deployment and flexible persistence layers.</li>
+                        </ul>
                     </div>
 
                     <!-- Education -->
@@ -323,21 +392,27 @@
                         </div>
                     </div>
 
-                    <!-- Certifications -->
+                    <!-- Currently Exploring -->
                     <div class="sidebar-card reveal-right stagger-2 mt-md">
-                        <h3 class="sidebar-card-title">Certifications</h3>
-                        <ul class="looking-list mt-sm">
-                            <li>Oracle Cloud Infrastructure 2025 Certified Gen AI Professional</li>
-                            <li>Oracle AI Vector Search Certified Professional</li>
-                            <li>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</li>
-                            <li>Data Analysis Using Python (Google / Coursera)</li>
-                        </ul>
+                        <h3 class="sidebar-card-title">Currently Exploring</h3>
+                        <div class="stack-tags-row mt-sm">
+                            <span class="stack-tag tag-secondary">RAG Pipelines</span>
+                            <span class="stack-tag tag-secondary">Vector Search</span>
+                            <span class="stack-tag tag-secondary">LLM Orchestration</span>
+                            <span class="stack-tag tag-secondary">Scalable Inference APIs</span>
+                        </div>
                     </div>
 
-                    <!-- Hackathons & Awards -->
-                    <div class="sidebar-card reveal-right stagger-3 mt-md">
-                        <h3 class="sidebar-card-title">Achievements</h3>
-                        <ul class="looking-list mt-sm">
+                    <!-- Certifications & Achievements -->
+                    <div class="sidebar-card reveal-right stagger-3 mt-md" style="opacity: 0.85;">
+                        <h3 class="sidebar-card-title">Certifications</h3>
+                        <ul class="looking-list mt-sm" style="font-size: 0.9rem;">
+                            <li>Oracle Cloud Infrastructure 2025 Certified Gen AI Professional</li>
+                            <li>Oracle AI Vector Search Certified Professional</li>
+                            <li>Data Analysis Using Python (Google)</li>
+                        </ul>
+                        <h3 class="sidebar-card-title mt-md">Achievements</h3>
+                        <ul class="looking-list mt-xs" style="font-size: 0.9rem;">
                             <li><strong>2nd Prize</strong> — VISIONX Hackathon</li>
                         </ul>
                     </div>
@@ -422,8 +497,8 @@
     <footer class="container" role="contentinfo">
         <div class="footer-inner">
             <div>
-                <p class="footer-copy">Tejas Acharya C · AI/ML & Frontend Engineer</p>
-                <p class="dim footer-sub mt-xs">Built with precision. Engineered for scale.</p>
+                <p class="footer-copy">Tejas Acharya C</p>
+                <p class="dim footer-sub mt-xs">AI/ML & Frontend Engineer<br>Bengaluru, India</p>
             </div>
             <nav class="footer-links" aria-label="Footer links">
                 <a href="https://github.com/Tejas-Acharya-C" target="_blank" rel="noopener noreferrer">GitHub</a>
