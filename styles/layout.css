@@ -14,6 +14,6 @@ section {
 }
 
 @media (max-width: 600px) {
-    .container { padding: 0 var(--space-md); }
+    .container { padding: 0 var(--space-6); }
     section { padding: var(--space-lg) 0; }
 }
