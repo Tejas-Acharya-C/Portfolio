@@ -94,4 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ── Mobile Accordion Handling ─────────────────────────────────
+    const accordions = document.querySelectorAll('.mobile-accordion');
+    if (window.innerWidth <= 800) {
+        accordions.forEach(acc => acc.removeAttribute('open'));
+    }
+
 });
