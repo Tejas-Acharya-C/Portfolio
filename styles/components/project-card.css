@@ -25,7 +25,7 @@
     gap: var(--space-sm);
 }
 
-.project-links { display: flex; gap: var(--space-md); }
+.project-links { display: flex; gap: var(--space-md); flex-wrap: wrap; }
 .project-link {
     display: inline-flex;
     align-items: center;
@@ -58,8 +58,10 @@
     transform-origin: center;
 }
 
-.project-card:hover .project-thumbnail img {
-    transform: scale(1.04);
+@media (hover: hover) and (pointer: fine) {
+    .project-card:hover .project-thumbnail img {
+        transform: scale(1.04);
+    }
 }
 
 .bento-grid-project {
