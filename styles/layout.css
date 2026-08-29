@@ -1,19 +1,24 @@
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding-inline: var(--space-lg);
+    padding-inline: clamp(20px, 4vw, var(--space-12));
     position: relative;
     z-index: 1;
 }
 
 section {
-    padding-block: var(--space-xl);
+    padding-block: var(--space-section);
     border-bottom: 1px solid var(--outline);
     position: relative;
     z-index: 1;
 }
 
-@media (max-width: 600px) {
-    .container { padding-inline: var(--space-6); }
-    section { padding-block: var(--space-lg); }
+@media (max-width: 1024px) {
+    section { padding-block: var(--space-20); }
 }
+
+@media (max-width: 600px) {
+    .container { padding-inline: var(--space-5); }
+    section { padding-block: var(--space-16); }
+}
+

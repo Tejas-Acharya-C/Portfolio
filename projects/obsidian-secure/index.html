@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Obsidian Secure Case Study | Tejas Acharya C</title>
+    <meta name="description"
+        content="Technical case study of Obsidian Secure: a containerized RBAC and JWT-protected API security architecture built with FastAPI, MongoDB, React, and Docker.">
+    <meta name="author" content="Tejas Acharya C">
+    <link rel="canonical" href="https://tejas-acharya-c.github.io/Portfolio/projects/obsidian-secure/">
+
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://tejas-acharya-c.github.io/Portfolio/projects/obsidian-secure/">
+    <meta property="og:title" content="Obsidian Secure Case Study | Tejas Acharya C">
+    <meta property="og:description"
+        content="Technical case study of Obsidian Secure: a containerized RBAC and JWT-protected API security architecture.">
+    <meta property="og:image" content="https://tejas-acharya-c.github.io/Portfolio/assets/obsidian_secure_dashboard.webp">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Obsidian Secure Case Study | Tejas Acharya C">
+    <meta name="twitter:description"
+        content="Technical case study of Obsidian Secure: a containerized RBAC and JWT-protected API security architecture.">
+    <meta name="twitter:image" content="https://tejas-acharya-c.github.io/Portfolio/assets/obsidian_secure_dashboard.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Obsidian Secure — RBAC & API Security Platform Case Study",
+        "description": "Technical case study of an authentication middleware perimeter and MongoDB persistence layer.",
+        "author": {
+            "@type": "Person",
+            "name": "Tejas Acharya C",
+            "url": "https://tejas-acharya-c.github.io/Portfolio/"
+        },
+        "image": "https://tejas-acharya-c.github.io/Portfolio/assets/obsidian_secure_dashboard.webp"
+    }
+    </script>
+
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&text=menu,arrow_forward,arrow_back&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../style.css?v=3">
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ── Navigation ──────────────────────────────────────────── -->
+    <header>
+        <nav class="container" aria-label="Main navigation">
+            <a href="../../index.html" class="logo" aria-label="Tejas Acharya C — home">TEJAS ACHARYA C</a>
+            <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+            </button>
+            <ul class="nav-links" id="nav-menu" role="list">
+                <li><a href="../../index.html#work">Work</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+                <li><a href="../../Tejas_Acharya_Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Resume PDF">Resume ↗</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ── Case Study Header ─────────────────────────────────── -->
+        <article class="container" style="padding-top: calc(var(--space-section) * 0.7); max-width: 960px;">
+            
+            <div class="mb-md">
+                <a href="../../index.html#work" class="text-link" style="display: inline-flex; align-items: center; gap: 4px;">
+                    ← Back to selected work
+                </a>
+            </div>
+
+            <!-- 01 / OVERVIEW -->
+            <header class="case-study-hero">
+                <span class="section-label">01 / OVERVIEW</span>
+                <h1 class="h1 mt-xs">Obsidian Secure</h1>
+                <p class="hero-role mt-xs">RBAC &amp; API Security Platform</p>
+                <p class="body mt-sm" style="font-size: 1.0625rem; max-width: 780px;">
+                    A containerized full-stack application demonstrating fine-grained role-based access control (RBAC), secure JSON Web Token lifecycle validation, and clean administrative user management.
+                </p>
+
+                <!-- Project Metadata Row -->
+                <div class="case-study-meta-grid" aria-label="Project Metadata">
+                    <div class="case-study-meta-item">
+                        <span class="case-study-meta-label">Focus</span>
+                        <span class="case-study-meta-val">Backend Security &amp; Systems Architecture</span>
+                    </div>
+                    <div class="case-study-meta-item">
+                        <span class="case-study-meta-label">Stack</span>
+                        <span class="case-study-meta-val">Python · FastAPI · MongoDB · Docker · React · JWT</span>
+                    </div>
+                    <div class="case-study-meta-item">
+                        <span class="case-study-meta-label">Source</span>
+                        <a href="https://github.com/Tejas-Acharya-C/Obsidian-Secure" target="_blank" rel="noopener noreferrer" class="text-link" style="font-weight: 600;">
+                            GitHub Repository ↗
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-thumbnail mt-md" style="border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; background: var(--surface);">
+                    <img src="../../assets/obsidian_secure_dashboard.webp"
+                        alt="Obsidian Secure Role-Based Administration Dashboard"
+                        width="800"
+                        height="400"
+                        loading="eager"
+                        fetchpriority="high"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+            </header>
+
+            <hr class="editorial-divider">
+
+            <!-- 02 / THE PROBLEM & 03 / WHAT I BUILT (2-Column Grid) -->
+            <div class="case-study-grid">
+                <section aria-labelledby="problem-heading" class="case-study-block">
+                    <span class="section-label">02 / THE PROBLEM</span>
+                    <h2 class="h2 mt-xs" id="problem-heading">Granular Authorization &amp; Environment Drift</h2>
+                    <div class="body mt-sm">
+                        <p>
+                            Web APIs that handle sensitive administrative routes often suffer from fragmented authorization logic spread across handlers, risking privilege escalation and data exposure.
+                        </p>
+                        <p class="mt-xs">
+                            The challenge was to establish a centralized authentication middleware boundary that validates JWT signatures, enforces role permissions declaratively on routes, and maintains exact environment parity via Docker containers.
+                        </p>
+                    </div>
+                </section>
+
+                <section aria-labelledby="built-heading" class="case-study-block">
+                    <span class="section-label">03 / WHAT I BUILT</span>
+                    <h2 class="h2 mt-xs" id="built-heading">Security Perimeter &amp; Management Interface</h2>
+                    <div class="body mt-sm">
+                        <p>
+                            A secure, decoupled architecture consisting of:
+                        </p>
+                        <ul class="project-bullets mt-xs">
+                            <li>A <strong>FastAPI core service</strong> featuring custom JWT authentication middleware, password hashing, and role hierarchy enforcement.</li>
+                            <li>A <strong>MongoDB database layer</strong> for storing flexible user accounts, role definitions, and access logs.</li>
+                            <li>A clean <strong>React administration dashboard</strong> for user auditing and role permission management.</li>
+                            <li><strong>Docker Compose orchestration</strong> providing one-command local environment setup.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <hr class="editorial-divider">
+
+            <!-- 04 / HOW IT WORKS & 05 / ARCHITECTURE (2-Column Grid) -->
+            <div class="case-study-grid">
+                <section aria-labelledby="workflow-heading" class="case-study-block">
+                    <span class="section-label">04 / HOW IT WORKS</span>
+                    <h2 class="h2 mt-xs" id="workflow-heading">Request Authentication Lifecycle</h2>
+                    <div class="body mt-sm">
+                        <ol class="project-bullets" style="list-style-type: decimal; padding-left: var(--space-md);">
+                            <li><strong>Credential Ingestion:</strong> Client submits authentication credentials to FastAPI token endpoints.</li>
+                            <li><strong>Verification:</strong> Backend verifies hashed passwords and issues signed JWT bearer tokens.</li>
+                            <li><strong>Middleware Inspection:</strong> Subsequent API requests pass through dependency-injected middleware that validates token signatures and extracts user roles.</li>
+                            <li><strong>Route Authorization:</strong> Endpoints execute only if the verified role satisfies the route's permission policy.</li>
+                            <li><strong>Data Response:</strong> Protected data is retrieved from MongoDB and serialized back to the client.</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section aria-labelledby="arch-heading" class="case-study-block">
+                    <span class="section-label">05 / ARCHITECTURE</span>
+                    <h2 class="h2 mt-xs" id="arch-heading">Security Perimeter Pipeline</h2>
+                    <div class="mt-sm">
+                        <div class="architecture-flow" aria-label="System architecture pipeline">
+                            <span class="arch-node">React Admin UI</span>
+                            <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_forward</span>
+                            <span class="arch-node">JWT Auth Middleware</span>
+                            <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_forward</span>
+                            <span class="arch-node">FastAPI Protected REST APIs</span>
+                            <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_forward</span>
+                            <span class="arch-node">MongoDB &amp; Docker</span>
+                        </div>
+                        <p class="body mt-xs" style="font-size: 0.9375rem;">
+                            The perimeter intercepts every HTTP request to enforce role assertions before executing downstream database handlers.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <hr class="editorial-divider">
+
+            <!-- 06 / MY CONTRIBUTION & 07 / ENGINEERING DECISIONS (2-Column Grid) -->
+            <div class="case-study-grid">
+                <section aria-labelledby="contrib-heading" class="case-study-block">
+                    <span class="section-label">06 / MY CONTRIBUTION</span>
+                    <h2 class="h2 mt-xs" id="contrib-heading">Engineering Responsibilities</h2>
+                    <div class="body mt-sm">
+                        <ul class="project-bullets">
+                            <li>Implemented role-based access control (RBAC) and JWT authentication with custom validation middleware in FastAPI.</li>
+                            <li>Configured MongoDB data persistence layer for flexible access control schemas and user collections.</li>
+                            <li>Authored multi-container Docker compose configurations for consistent local and deployment environments.</li>
+                            <li>Constructed the React administration UI for role management and authenticated state handling.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section aria-labelledby="decisions-heading" class="case-study-block">
+                    <span class="section-label">07 / ENGINEERING DECISIONS</span>
+                    <h2 class="h2 mt-xs" id="decisions-heading">Technical Trade-Offs</h2>
+                    <ul class="case-study-decisions-list">
+                        <li class="case-study-decision-item">
+                            <p class="case-study-decision-title">01 / Layered Security Perimeter</p>
+                            <p class="case-study-decision-text">Positioned authentication checks strictly inside reusable middleware dependencies to avoid authorization logic duplication across routes.</p>
+                        </li>
+                        <li class="case-study-decision-item">
+                            <p class="case-study-decision-title">02 / Flexible Document Persistence</p>
+                            <p class="case-study-decision-text">Selected MongoDB document store for flexible role definitions, polymorphic metadata, and fast credential lookups.</p>
+                        </li>
+                        <li class="case-study-decision-item">
+                            <p class="case-study-decision-title">03 / Multi-Container Isolation</p>
+                            <p class="case-study-decision-text">Orchestrated multi-service Docker configurations guaranteeing reproducible execution environments across testing and deployment.</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <hr class="editorial-divider">
+
+            <!-- 08 / WHAT I LEARNED & 09 / BUILT WITH & SOURCE (2-Column Grid) -->
+            <div class="case-study-grid mb-lg">
+                <section aria-labelledby="learned-heading" class="case-study-block">
+                    <span class="section-label">08 / WHAT I LEARNED</span>
+                    <h2 class="h2 mt-xs" id="learned-heading">Key Technical Insights</h2>
+                    <div class="body mt-sm">
+                        <p>
+                            Centralizing authorization logic inside framework middleware dependencies prevents security regression and ensures route handlers focus purely on domain logic.
+                        </p>
+                    </div>
+                </section>
+
+                <section aria-labelledby="stack-heading" class="case-study-block">
+                    <span class="section-label">09 / BUILT WITH &amp; SOURCE</span>
+                    <h2 class="h2 mt-xs" id="stack-heading">Technology Stack &amp; Code</h2>
+                    <div class="stack-tags-row mt-sm">
+                        <span class="stack-tag">Python</span>
+                        <span class="stack-tag">FastAPI</span>
+                        <span class="stack-tag">MongoDB</span>
+                        <span class="stack-tag">Docker</span>
+                        <span class="stack-tag">React</span>
+                        <span class="stack-tag">JWT</span>
+                    </div>
+                    <div class="mt-md">
+                        <a href="https://github.com/Tejas-Acharya-C/Obsidian-Secure" target="_blank" rel="noopener noreferrer" class="contact-link-large" style="display: inline-block;">
+                            github.com/Tejas-Acharya-C/Obsidian-Secure ↗
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- ── Footer ────────────────────────────────────────────────── -->
+    <footer class="container" role="contentinfo">
+        <div class="footer-inner">
+            <div>
+                <p class="footer-copy">TEJAS ACHARYA C</p>
+                <p class="footer-sub mt-xs">AI/ML &amp; Full-Stack Engineer<br>Bengaluru, India</p>
+                <p class="footer-sub mt-xs" style="font-size: 0.8125rem;">Last updated · 2026</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer links">
+                <a href="https://github.com/Tejas-Acharya-C" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit GitHub Profile">GitHub</a>
+                <a href="https://linkedin.com/in/tejas-acharya-c" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit LinkedIn Profile">LinkedIn</a>
+                <a href="mailto:tejasacharyacprofessional@gmail.com"
+                    aria-label="Send Email">Email</a>
+                <a href="../../Tejas_Acharya_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                    aria-label="View Resume">Resume</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+</body>
+
+</html>

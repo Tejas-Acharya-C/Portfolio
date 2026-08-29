@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Aegis Analytica Case Study | Tejas Acharya C</title>
+    <meta name="description"
+        content="Technical case study of Aegis Analytica: an NLP-powered customer feedback ingestion, sentiment analysis, and visualization platform built with FastAPI, Scikit-learn, and React.">
+    <meta name="author" content="Tejas Acharya C">
+    <link rel="canonical" href="https://tejas-acharya-c.github.io/Portfolio/projects/aegis-analytica/">
+
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://tejas-acharya-c.github.io/Portfolio/projects/aegis-analytica/">
+    <meta property="og:title" content="Aegis Analytica Case Study | Tejas Acharya C">
+    <meta property="og:description"
+        content="Technical case study of Aegis Analytica: an NLP-powered feedback ingestion and sentiment classification platform.">
+    <meta property="og:image" content="https://tejas-acharya-c.github.io/Portfolio/assets/aegis_analytica_dashboard.webp">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aegis Analytica Case Study | Tejas Acharya C">
+    <meta name="twitter:description"
+        content="Technical case study of Aegis Analytica: an NLP-powered feedback ingestion and sentiment classification platform.">
+    <meta name="twitter:image" content="https://tejas-acharya-c.github.io/Portfolio/assets/aegis_analytica_dashboard.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Aegis Analytica — Customer Feedback Analyzer Case Study",
+        "description": "Technical case study of an applied NLP pipeline and FastAPI service layer for feedback classification.",
+        "author": {
+            "@type": "Person",
+            "name": "Tejas Acharya C",
+            "url": "https://tejas-acharya-c.github.io/Portfolio/"
+        },
+        "image": "https://tejas-acharya-c.github.io/Portfolio/assets/aegis_analytica_dashboard.webp"
+    }
+    </script>
+
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&text=menu,arrow_forward,arrow_back&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../style.css?v=3">
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ── Navigation ──────────────────────────────────────────── -->
+    <header>
+        <nav class="container" aria-label="Main navigation">
+            <a href="../../index.html" class="logo" aria-label="Tejas Acharya C — home">TEJAS ACHARYA C</a>
+            <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+            </button>
+            <ul class="nav-links" id="nav-menu" role="list">
+                <li><a href="../../index.html#work">Work</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+                <li><a href="../../Tejas_Acharya_Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Resume PDF">Resume ↗</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ── Case Study Header ─────────────────────────────────── -->
+        <article class="container" style="padding-top: calc(var(--space-section) * 0.7); max-width: 960px;">
+            
+            <div class="mb-md">
+                <a href="../../index.html#work" class="text-link" style="display: inline-flex; align-items: center; gap: 4px;">
+                    ← Back to selected work
+                </a>
+            </div>
+
+            <!-- 01 / OVERVIEW -->
+            <header class="case-study-hero">
+                <span class="section-label">01 / OVERVIEW</span>
+                <h1 class="h1 mt-xs">Aegis Analytica</h1>
+                <p class="hero-role mt-xs">Customer Feedback File Analyzer</p>
+                <p class="body mt-sm" style="font-size: 1.0625rem; max-width: 780px;">
+                    An applied machine learning web application that automates sentiment extraction and classification across unstructured customer feedback datasets, visualizing actionable metrics via an interactive dashboard.
+                </p>
+
+                <!-- Project Metadata Row -->
+                <div class="case-study-meta-grid" aria-label="Project Metadata">
+                    <div class="case-study-meta-item">
+                        <span class="case-study-meta-label">Focus</span>
+                        <span class="case-study-meta-val">AI / Machine Learning &amp; NLP</span>
+                    </div>
+                    <div class="case-study-meta-item">
+                        <span class="case-study-meta-label">Stack</span>
+                        <span class="case-study-meta-val">Python · FastAPI · Scikit-learn · React · Docker</span>
+                    </div>
+                    <div class="case-study-meta-item">
+                        <span class="case-study-meta-label">Source</span>
+                        <a href="https://github.com/Tejas-Acharya-C/CustomerFeedbackFileAnalyzer" target="_blank" rel="noopener noreferrer" class="text-link" style="font-weight: 600;">
+                            GitHub Repository ↗
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-thumbnail mt-md" style="border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; background: var(--surface);">
+                    <img src="../../assets/aegis_analytica_dashboard.webp"
+                        alt="Aegis Analytica Sentiment Extraction Dashboard Interface"
+                        width="800"
+                        height="400"
+                        loading="eager"
+                        fetchpriority="high"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+            </header>
+
+            <hr class="editorial-divider">
+
+            <!-- 02 / THE PROBLEM & 03 / WHAT I BUILT (2-Column Grid) -->
+            <div class="case-study-grid">
+                <section aria-labelledby="problem-heading" class="case-study-block">
+                    <span class="section-label">02 / THE PROBLEM</span>
+                    <h2 class="h2 mt-xs" id="problem-heading">Unstructured Ingestion Bottlenecks</h2>
+                    <div class="body mt-sm">
+                        <p>
+                            Customer review and feedback streams arrive as unstandardized tabular files and raw text. Manually triaging large volumes of feedback introduces operational bottlenecks and inconsistent sentiment labeling.
+                        </p>
+                        <p class="mt-xs">
+                            The objective was to create a lightweight, modular system capable of parsing uploaded feedback datasets, vectorizing lexical features, computing granular sentiment scores, and returning structured visual summaries without external API latency or heavyweight model overhead.
+                        </p>
+                    </div>
+                </section>
+
+                <section aria-labelledby="built-heading" class="case-study-block">
+                    <span class="section-label">03 / WHAT I BUILT</span>
+                    <h2 class="h2 mt-xs" id="built-heading">Modular NLP Service &amp; Interface</h2>
+                    <div class="body mt-sm">
+                        <p>
+                            A decoupled full-stack architecture consisting of:
+                        </p>
+                        <ul class="project-bullets mt-xs">
+                            <li>A non-blocking <strong>FastAPI backend</strong> providing asynchronous endpoints for file uploads, schema validation, and text normalization.</li>
+                            <li>An <strong>NLP classification pipeline</strong> leveraging Scikit-learn and Pandas for lexical feature extraction, token cleaning, and sentiment categorization.</li>
+                            <li>A responsive <strong>React frontend</strong> with interactive filtering, sentiment category breakdowns, and keyword distribution views.</li>
+                            <li>A <strong>Docker container configuration</strong> ensuring seamless reproduction across runtime environments.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <hr class="editorial-divider">
+
+            <!-- 04 / HOW IT WORKS & 05 / ARCHITECTURE (2-Column Grid) -->
+            <div class="case-study-grid">
+                <section aria-labelledby="workflow-heading" class="case-study-block">
+                    <span class="section-label">04 / HOW IT WORKS</span>
+                    <h2 class="h2 mt-xs" id="workflow-heading">End-to-End Ingestion Workflow</h2>
+                    <div class="body mt-sm">
+                        <ol class="project-bullets" style="list-style-type: decimal; padding-left: var(--space-md);">
+                            <li><strong>File Upload:</strong> User uploads tabular feedback documents (CSV/Excel) through the React UI.</li>
+                            <li><strong>Validation &amp; Cleaning:</strong> FastAPI validates row schemas, cleans text, and strips noise tokens.</li>
+                            <li><strong>Inference &amp; Scoring:</strong> Pre-trained Scikit-learn classification pipelines score each text entry.</li>
+                            <li><strong>Aggregation:</strong> Pandas aggregates sentiment distributions and polarity distributions.</li>
+                            <li><strong>Visualization:</strong> The client renders instant visual summaries and keyword breakdowns.</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section aria-labelledby="arch-heading" class="case-study-block">
+                    <span class="section-label">05 / ARCHITECTURE</span>
+                    <h2 class="h2 mt-xs" id="arch-heading">System Pipeline &amp; Data Flow</h2>
+                    <div class="mt-sm">
+                        <div class="architecture-flow" aria-label="System architecture pipeline">
+                            <span class="arch-node">React Client UI</span>
+                            <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_forward</span>
+                            <span class="arch-node">FastAPI Ingestion</span>
+                            <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_forward</span>
+                            <span class="arch-node">Scikit-learn Pipeline</span>
+                            <span class="material-symbols-outlined arch-arrow" aria-hidden="true">arrow_forward</span>
+                            <span class="arch-node">Dashboard</span>
+                        </div>
+                        <p class="body mt-xs" style="font-size: 0.9375rem;">
+                            The architecture enforces strict decoupling between file parsing, model vectorization, and client state presentation.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <hr class="editorial-divider">
+
+            <!-- 06 / MY CONTRIBUTION & 07 / ENGINEERING DECISIONS (2-Column Grid) -->
+            <div class="case-study-grid">
+                <section aria-labelledby="contrib-heading" class="case-study-block">
+                    <span class="section-label">06 / MY CONTRIBUTION</span>
+                    <h2 class="h2 mt-xs" id="contrib-heading">Engineering Responsibilities</h2>
+                    <div class="body mt-sm">
+                        <ul class="project-bullets">
+                            <li>Built the modular FastAPI REST backend for handling non-blocking file streaming and validation.</li>
+                            <li>Constructed reproducible text classification pipelines using Scikit-learn and Pandas for structured sentiment extraction.</li>
+                            <li>Designed the React UI dashboard components to visualize multi-dimensional sentiment metrics clearly.</li>
+                            <li>Structured the multi-stage Docker environment for deployment consistency.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section aria-labelledby="decisions-heading" class="case-study-block">
+                    <span class="section-label">07 / ENGINEERING DECISIONS</span>
+                    <h2 class="h2 mt-xs" id="decisions-heading">Technical Trade-Offs</h2>
+                    <ul class="case-study-decisions-list">
+                        <li class="case-study-decision-item">
+                            <p class="case-study-decision-title">01 / Modular Ingestion Layer</p>
+                            <p class="case-study-decision-text">Separated data transformation logic from HTTP transport routes, enabling pipeline iteration without altering API endpoints.</p>
+                        </li>
+                        <li class="case-study-decision-item">
+                            <p class="case-study-decision-title">02 / Lexical Vectorization Choice</p>
+                            <p class="case-study-decision-text">Selected Scikit-learn and Pandas vectorization for fast local inference and low CPU/memory footprints over heavy transformer models.</p>
+                        </li>
+                        <li class="case-study-decision-item">
+                            <p class="case-study-decision-title">03 / Container Orchestration</p>
+                            <p class="case-study-decision-text">Configured Docker containerization to eliminate local dependency mismatches and guarantee deployment parity.</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <hr class="editorial-divider">
+
+            <!-- 08 / WHAT I LEARNED & 09 / BUILT WITH & SOURCE (2-Column Grid) -->
+            <div class="case-study-grid mb-lg">
+                <section aria-labelledby="learned-heading" class="case-study-block">
+                    <span class="section-label">08 / WHAT I LEARNED</span>
+                    <h2 class="h2 mt-xs" id="learned-heading">Key Technical Insights</h2>
+                    <div class="body mt-sm">
+                        <p>
+                            Decoupling the ingestion, normalization, and model inference steps makes text analysis services significantly easier to unit test, profile, and extend when handling messy real-world datasets.
+                        </p>
+                    </div>
+                </section>
+
+                <section aria-labelledby="stack-heading" class="case-study-block">
+                    <span class="section-label">09 / BUILT WITH &amp; SOURCE</span>
+                    <h2 class="h2 mt-xs" id="stack-heading">Technology Stack &amp; Code</h2>
+                    <div class="stack-tags-row mt-sm">
+                        <span class="stack-tag">Python</span>
+                        <span class="stack-tag">FastAPI</span>
+                        <span class="stack-tag">Scikit-learn</span>
+                        <span class="stack-tag">Pandas</span>
+                        <span class="stack-tag">React</span>
+                        <span class="stack-tag">Tailwind CSS</span>
+                        <span class="stack-tag">Docker</span>
+                    </div>
+                    <div class="mt-md">
+                        <a href="https://github.com/Tejas-Acharya-C/CustomerFeedbackFileAnalyzer" target="_blank" rel="noopener noreferrer" class="contact-link-large" style="display: inline-block;">
+                            github.com/Tejas-Acharya-C/CustomerFeedbackFileAnalyzer ↗
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- ── Footer ────────────────────────────────────────────────── -->
+    <footer class="container" role="contentinfo">
+        <div class="footer-inner">
+            <div>
+                <p class="footer-copy">TEJAS ACHARYA C</p>
+                <p class="footer-sub mt-xs">AI/ML &amp; Full-Stack Engineer<br>Bengaluru, India</p>
+                <p class="footer-sub mt-xs" style="font-size: 0.8125rem;">Last updated · 2026</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer links">
+                <a href="https://github.com/Tejas-Acharya-C" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit GitHub Profile">GitHub</a>
+                <a href="https://linkedin.com/in/tejas-acharya-c" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit LinkedIn Profile">LinkedIn</a>
+                <a href="mailto:tejasacharyacprofessional@gmail.com"
+                    aria-label="Send Email">Email</a>
+                <a href="../../Tejas_Acharya_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                    aria-label="View Resume">Resume</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="../../main.js"></script>
+</body>
+
+</html>

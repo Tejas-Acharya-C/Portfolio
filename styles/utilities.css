@@ -9,6 +9,9 @@
 .mt-lg { margin-top: var(--space-lg); }
 .mt-xl { margin-top: var(--space-xl); }
 
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+
 :focus-visible {
     outline: 2px solid var(--primary);
     outline-offset: 4px;
