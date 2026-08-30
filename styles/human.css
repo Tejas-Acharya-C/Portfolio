@@ -545,7 +545,9 @@ body::before { display: none; }
 
 /* ── Contact Section ─────────────────────────────────────────── */
 .contact-section {
-    padding-block: var(--space-section);
+    padding-top: var(--space-20);
+    padding-bottom: var(--space-2xl);
+    border-bottom: none;
 }
 
 .contact-wrapper {
@@ -637,18 +639,18 @@ footer {
 
 /* ── Case Study Dedicated Page Styles ────────────────────────── */
 .case-study-hero {
-    margin-bottom: var(--space-md);
+    margin-bottom: 0;
 }
 
 .case-study-meta-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-md);
-    padding-block: var(--space-md);
+    padding-block: var(--space-sm);
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
     margin-top: var(--space-md);
-    margin-bottom: var(--space-md);
+    margin-bottom: 0;
 }
 
 .case-study-meta-item {
@@ -680,6 +682,8 @@ footer {
 }
 
 .case-study-block {
+    padding-block: 0;
+    border-bottom: none;
     margin-bottom: 0;
 }
 
@@ -785,6 +789,13 @@ footer {
     .footer-inner {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .contact-section {
+        padding-top: var(--space-16);
+        padding-bottom: var(--space-12);
+    }
+    .contact-links-row {
+        gap: 16px 24px;
     }
 }
 
