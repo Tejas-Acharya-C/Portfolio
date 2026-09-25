@@ -1,36 +1,36 @@
+/* Portfolio Redesign — Phase 4 Design System */
 :root {
-    /* Editorial Color System */
-    --bg: #F5F4EF;
-    --surface: #FBFAF7;
-    --ink: #171815;
-    --muted: #6F716A;
-    --line: #D9D8D0;
+    --bg: #0b0d0c;
+    --surface: #111412;
+    --surface-raised: #171b18;
+    --surface-soft: #1d231f;
+    --ink: #f2f4ef;
+    --muted: #9aa39c;
+    --line: #29302b;
 
-    /* Accent System (10% ratio) */
-    --accent: #4F6B5A;
-    --accent-dark: #3E5548;
-    --accent-soft: #E4EAE4;
+    --accent: #b7d8c2;
+    --accent-strong: #8fbea0;
+    --accent-soft: #20352a;
+    --warm: #d8c7a7;
 
-    /* System mappings */
     --bg-color: var(--bg);
     --surface-white: var(--surface);
-    --surface-low: #F0EFEA;
-    --surface-mid: #E8E7E0;
+    --surface-low: var(--surface-soft);
+    --surface-mid: #252c27;
 
     --primary: var(--ink);
-    --primary-light: #2A2C27;
-    --on-primary: var(--surface);
+    --primary-light: #ffffff;
+    --on-primary: var(--bg);
 
     --text-main: var(--ink);
     --text-dim: var(--muted);
     --text-dark: var(--ink);
 
     --outline: var(--line);
-    --shadow-low: rgba(23, 24, 21, 0.03);
-    --shadow-mid: rgba(23, 24, 21, 0.06);
-    --shadow-high: rgba(23, 24, 21, 0.1);
+    --shadow-low: rgba(0, 0, 0, 0.18);
+    --shadow-mid: rgba(0, 0, 0, 0.28);
+    --shadow-high: rgba(0, 0, 0, 0.42);
 
-    /* Spacing Scale */
     --space-1: 4px;
     --space-2: 8px;
     --space-3: 12px;
@@ -45,20 +45,21 @@
     --space-24: 96px;
     --space-30: 120px;
 
-    /* Semantic aliases */
     --space-xs: var(--space-1);
     --space-sm: var(--space-2);
     --space-md: var(--space-4);
     --space-lg: var(--space-8);
     --space-xl: var(--space-12);
     --space-2xl: var(--space-16);
-    --space-section: var(--space-30);
+    --space-section: clamp(88px, 10vw, 144px);
 
-    /* Restrained Radii */
-    --radius-sm: 4px;
-    --radius-md: 6px;
-    --radius-lg: 8px;
-    --max-width: 1280px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --max-width: 1320px;
+
+    --font-display: "Space Grotesk", "Inter", sans-serif;
+    --font-body: "Inter", sans-serif;
 }
 
 *, *::before, *::after {
@@ -69,28 +70,31 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
     overflow-x: clip;
 }
 
 body {
-    background-color: var(--bg-color);
+    background:
+        radial-gradient(circle at 82% 8%, rgba(143, 190, 160, 0.07), transparent 28rem),
+        var(--bg-color);
     color: var(--text-main);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     line-height: 1.6;
     min-height: 100vh;
-    overflow-x: hidden;
     overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    pointer-events: none;
-    /* Subtler paper texture */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' seed='1' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23paper)' opacity='0.005'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-size: 320px 320px;
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+::selection {
+    background: var(--accent);
+    color: #101511;
 }
